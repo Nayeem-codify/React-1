@@ -1,0 +1,505 @@
+:root {
+    --white: #fff;
+    --primary: #ff9600;
+    --ibm: 'IBM Plex Sans', sans-serif;
+
+}
+
+/*======== Common Code Start Here =========*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    line-height: 0.8;
+}
+
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.common_btn {
+    background-color: var(--primary);
+    color: var(--white);
+    display: inline-block;
+    padding: 20px 50px;
+    transition: all linear 0.4s;
+    font-family: var(--ibm);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 10px;
+
+}
+
+.common_btn i {
+    margin-left: 10px;
+}
+
+.common_btn:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.sub_heading {
+    font-family: 'Yellowtail', cursive;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.heading {
+    color: #222;
+    font-family: var(--ibm);
+    font-size: 54px;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+/* ======== Common Code End Here ========= */
+
+/* ======== Navbar Code Start Here ========= */
+#navbar {
+    background-color: transparent;
+    padding: 20px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 20%;
+}
+
+.menu {
+    width: 60%;
+}
+
+.menu>ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.menu>ul li a {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    transition: all linear 0.4s;
+    font-family: var(--ibm);
+}
+
+.menu ul li a i {
+    margin-left: 7px;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.dropdown {
+    width: 150px;
+    background-color: transparent;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear 0.4s;
+}
+
+.menu ul li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu ul li a:hover {
+    color: var(--primary);
+}
+
+.nav_btn {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ======== Navbar Code End Here ========= */
+
+/* ======== Banner Start Here ====== */
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)), url(../images/banner.jpg);
+    padding: 290px 0 156px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.banner_content {
+    text-align: center;
+}
+
+.banner_content h1 {
+    font-size: 72px;
+    color: var(--white);
+    font-family: var(--ibm);
+    font-weight: 700;
+    line-height: normal;
+    padding: 55px;
+    width: 950px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.banner_shape {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.banner_shape img {
+    width: 100%;
+    display: block;
+}
+
+/* ======== Banner End Here ====== */
+
+/* ======== Excitment Start Here ====== */
+#excitment {
+    padding: 75px 0 85px 0;
+}
+
+.excitment_wrapper {
+    display: flex;
+    column-gap: 200px;
+
+}
+
+.excitment_content {
+    width: 600px;
+    padding-top: 20px;
+}
+
+.excitment_content .sub_heading {
+    color: #14B9F1;
+}
+
+.excitment_content .heading {
+    margin-top: 5px;
+}
+
+.excitment_img .excit_img_item:nth-child(2) {
+    width: 300px;
+    height: 520px;
+}
+
+.excitment_main {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.excitment_item {
+    display: flex;
+    align-items: center;
+}
+
+.excitment_content>p {
+    color: #222;
+    font-family: var(--ibm);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    margin-top: 62px;
+}
+
+.excitment_content p::after {
+    position: absolute;
+    background-color: #A0A0A0;
+    content: "";
+    width: 60px;
+    height: 5px;
+    left: 0;
+    top: -35px;
+
+}
+
+.excitment_content .common_btn:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.excitment_img {
+    width: 600px;
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.excit_img_item {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 620px;
+
+}
+
+.excit_img_item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.excit_icon {
+    height: 30px;
+    width: 30px;
+    background-color: #EEE;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ======== Excitment End Here ======== */
+
+/* ======== Counter Start Here ====== */
+#conter {
+    margin-bottom: 198px;
+}
+
+.conter_wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.conter_item {
+    width: 308px;
+    background-color: rgba(255, 244, 230, 0.5);
+    border-radius: 10px;
+    padding: 40px 85px 45px 85px;
+    text-align: center;
+}
+
+.conter_item:nth-child(1) {
+    background-color: #FFF4E5;
+}
+
+.conter_item:nth-child(2) {
+    background-color: #E7FDE9;
+}
+
+.conter_item:nth-child(3) {
+    background-color: #F2F2FD;
+}
+
+.conter_item:nth-child(4) {
+    background-color: #FDF1F5;
+}
+
+.conter_item span {
+    font-size: 80px;
+    font-family: var(--ibm);
+    font-weight: 700;
+    line-height: normal;
+}
+
+.conter_item h6 {
+    margin-top: 6px;
+    font-family: var(--ibm);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* ======== Counter End Here ====== */
+
+/* ======== Sports Code Start Here ====== */
+
+#sports {
+    background-color: #0C3543;
+    padding: 102px;
+    position: relative;
+}
+
+.sports_heading_wrapper {
+    display: flex;
+    column-gap: 165px;
+    align-items: center;
+}
+
+.sports_wrapper {
+    margin-top: 90px;
+    position: relative;
+    display: flex;
+    row-gap: 50px;
+    column-gap: 24px;
+    flex-wrap: wrap;
+}
+
+.sports_wrapper::after {
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 80px;
+    height: 2px;
+    background-color: #FFF;
+    content: "";
+}
+
+.sports_item {
+    background-color: #0F4152;
+    width: 424px;
+    border-radius: 10px;
+}
+
+.sports_img {
+    height: 365px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.sports_img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.sports_content {
+    color: var(--white);
+    padding: 27px 30px 32px 30px;
+    text-align: center;
+}
+
+.sports_heading_wrapper .paragraph {
+    color: var(--white);
+    width: 638px;
+}
+
+.sports_heading_wrapper .sub_heading {
+    color: #FF9600;
+}
+
+.sports_heading_wrapper .heading {
+    color: #FFF;
+    width: 400px;
+    margin-top: 5px;
+}
+
+.sports_content h3 {
+    font-family: var(--ibm);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 23px;
+}
+
+.bottom_heading h2 {
+    margin: 83px 0 100px 0;
+    text-align: center;
+    font-size: 160px;
+    font-weight: 400;
+    color: var(--white);
+    font-family: 'Arizonia', cursive;
+}
+
+/* ======== Sports code End Here ======== */
+
+/* ======== Extrme Start Here ====== */
+
+#extrem {
+    background-color: var(--primary);
+    height: 500px;
+}
+
+.extrem_shape {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.extrem_shape img {
+    width: 100%;
+    display: block;
+}
+
+.extrem_content {
+    color: var(--white);
+    text-align: center;
+}
+
+/* ======== Extrme End Here ======== */
+
+#club {
+    background-color: var(--primary);
+    height: 1320px;
+}
+
+.club_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 110px;
+}
+
+.sub_club {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    color: var(--white);
+}
+
+.club_wrapper .paragraph {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    margin: 50px;
+    color: var(--white);
+}
+
+#club .common_btn:hover {
+    background-color: #0C3543;
+    color: var(--white);
+}
+
+.club_content {
+    text-align: center;
+}
